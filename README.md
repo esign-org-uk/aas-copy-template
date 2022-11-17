@@ -43,25 +43,3 @@ Assuming you have specified the required parameters correctly, then you should s
 To assist with diagnosing any issues, the documents in the source template are written to the local filesystem.
 
 ![Sample Output Files](/images/example-output.png)
-
-## Building
-
-If you would like to build a release package locally, you should have the following software installed:
-
-+ OS: Linux, macOS, Windows
-+ Java JDK: version 1.8 or above
-+ Apache Maven
-
-The tool makes use of the [Adobe Sign Java SDK](https://opensource.adobe.com/acrobat-sign/sdks/java.html), so you will first need to clone the [acrobat-sign repository](https://github.com/adobe/acrobat-sign) and install the package into your Maven repository by issuing the following commands:
-
-```sh
-cd <location-of-cloned-acrobat-sign-repo>/sdks/AcrobatSign_JAVA_SDK
-mvn clean install
-```
-
-Once this has completed, clone this repository and build the package by issuing:
-
-```sh
-cd <location-of-cloned-tool-repo>
-mvn clean package
-```
